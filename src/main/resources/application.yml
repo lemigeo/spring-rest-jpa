@@ -1,0 +1,74 @@
+spring:
+  profiles:
+    active: dev
+ 
+server:
+  port: 8081
+  
+--- 
+
+spring:
+  profiles: dev
+  
+rest:
+  greeting: test hello
+  
+datasource:
+  rest:
+    url: jdbc:mysql://localhost:3306/rest?autoReconnect=true&useSSL=false
+    username: rest
+    password: rest
+    driver-class-name: com.mysql.jdbc.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    initial-size: 2
+    min-idle: 2
+    max-idle: 3
+    max-active: 5
+    validation-query: SELECT 1
+  log:
+    url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
+    username: rest
+    password: rest
+    driver-class-name: com.mysql.jdbc.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    initial-size: 2
+    min-idle: 2
+    max-idle: 3
+    max-active: 5
+    validation-query: SELECT 1
+    
+---
+
+spring:
+  profiles: live
+  
+rest:
+  greeting: hello
+
+datasource:
+  rest:
+    url: jdbc:mysql://localhost:3306/rest?autoReconnect=true&useSSL=false
+    username: rest
+    password: rest
+    driver-class-name: com.mysql.jdbc.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    initial-size: 2
+    min-idle: 2
+    max-idle: 3
+    max-active: 5
+    validation-query: SELECT 1
+  log:
+    url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
+    username: rest
+    password: rest
+    driver-class-name: com.mysql.jdbc.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    initial-size: 2
+    min-idle: 2
+    max-idle: 3
+    max-active: 5
+    validation-query: SELECT 1
