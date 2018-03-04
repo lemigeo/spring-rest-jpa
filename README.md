@@ -1,2 +1,5 @@
 # spring-rest-jpa
-springboot, rest, jpa sample
+springboot, rest, jpa, swagger sample
+
+default port: 8081
+swagger: /swagger-ui.html
