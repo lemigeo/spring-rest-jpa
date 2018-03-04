@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableJpaRepositories(
   entityManagerFactoryRef = "logEntityManagerFactory",
+  transactionManagerRef="logTransactionManager",
   basePackages = { "com.rest.log.repository" }
 )
 public class RestLogDataSourceConfig {

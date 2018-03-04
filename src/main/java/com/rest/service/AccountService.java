@@ -48,7 +48,7 @@ public class AccountService {
 		return entity;
 	}
 	
-	public void block(long acctNo) throws Exception {
+	public Account block(long acctNo) throws Exception {
 		TransactionStatus status = getTransaction();
 		Account entity;
 		try{
@@ -68,9 +68,10 @@ public class AccountService {
 			transMgr.rollback(status);
 			throw new RestException(e.getMessage(), e);
 		}
+		return entity;
 	}
 	
-	public void unblock(long acctNo) throws Exception {
+	public Account unblock(long acctNo) throws Exception {
 		TransactionStatus status = getTransaction();
 		Account entity;
 		try{
@@ -90,6 +91,7 @@ public class AccountService {
 			transMgr.rollback(status);
 			throw new RestException(e.getMessage(), e);
 		}
+		return entity;
 	}
 	
 	private TransactionStatus getTransaction() {

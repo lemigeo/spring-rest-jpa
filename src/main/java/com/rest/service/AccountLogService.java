@@ -17,13 +17,17 @@ public class AccountLogService {
 	@Autowired
 	private AccountLogRepository repository;
 	
-	public void add(Account acct) {
-		AccountLog entity = new AccountLog(acct);
+	public AccountLogService() {
+	}
+	
+	public void add(Account acct) throws Exception{
 		try {
+			AccountLog entity = new AccountLog(acct);
 			repository.save(entity);
 		}
 		catch (Exception e) {
 			logger.error(e.getMessage());
+			throw e;
 		}
 	}
 }

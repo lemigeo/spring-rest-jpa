@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import com.rest.domain.Account;
 
 @Entity
-@Table(name = "account_lopg")
+@Table(name = "account_log")
 public class AccountLog {
 	
 	@Id

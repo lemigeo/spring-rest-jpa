@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableJpaRepositories(
   entityManagerFactoryRef = "entityManagerFactory",
+  transactionManagerRef="transactionManager",
   basePackages = { "com.rest.repository" }
 )
 public class RestDataSourceConfig {
