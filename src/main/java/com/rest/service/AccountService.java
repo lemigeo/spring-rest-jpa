@@ -40,7 +40,7 @@ public class AccountService {
 	public Account getInfo(long acctNo) throws Exception {
 		Account entity;
 		try {
-			entity = repository.findOne(acctNo);
+			entity = repository.findById(acctNo).get();
 		}
 		catch(Exception e) {
 			throw new RestException(e.getMessage(), e);
@@ -52,7 +52,7 @@ public class AccountService {
 		TransactionStatus status = getTransaction();
 		Account entity;
 		try{
-			entity = repository.findOne(acctNo);
+			entity = repository.findById(acctNo).get();
 			if(entity == null) {
 				throw new RestException("account not found");
 			}
@@ -75,7 +75,7 @@ public class AccountService {
 		TransactionStatus status = getTransaction();
 		Account entity;
 		try{
-			entity = repository.findOne(acctNo);
+			entity = repository.findById(acctNo).get();
 			if(entity == null) {
 				throw new RestException("account not found");
 			}

@@ -1,7 +1,7 @@
 spring:
   profiles:
     active: dev
- 
+
 server:
   port: 8081
   
@@ -15,7 +15,7 @@ rest:
   
 datasource:
   rest:
-    url: jdbc:mysql://localhost:3306/rest?autoReconnect=true&useSSL=false
+    jdbc-url: jdbc:mysql://localhost:3306/rest?autoReconnect=true&useSSL=false
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
@@ -27,7 +27,7 @@ datasource:
     max-active: 5
     validation-query: SELECT 1
   log:
-    url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
+    jdbc-url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
@@ -49,7 +49,7 @@ rest:
 
 datasource:
   rest:
-    url: jdbc:mysql://localhost:3306/rest?autoReconnect=true&useSSL=false
+    jdbc-url: jdbc:mysql://localhost:3306/rest?autoReconnect=true&useSSL=false
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
@@ -61,7 +61,7 @@ datasource:
     max-active: 5
     validation-query: SELECT 1
   log:
-    url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
+    jdbc-url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
