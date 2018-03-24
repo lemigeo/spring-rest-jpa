@@ -19,25 +19,19 @@ datasource:
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
-    test-on-borrow: true
-    test-while-idle: true
-    initial-size: 2
-    min-idle: 2
-    max-idle: 3
-    max-active: 5
-    validation-query: SELECT 1
+    minimum-idle: 2
+    maximum-pool-size: 5
+    auto-commit: false
+    connection-test-query: SELECT 1
   log:
     jdbc-url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
-    test-on-borrow: true
-    test-while-idle: true
-    initial-size: 2
-    min-idle: 2
-    max-idle: 3
-    max-active: 5
-    validation-query: SELECT 1
+    minimum-idle: 2
+    maximum-pool-size: 5
+    auto-commit: false
+    connection-test-query: SELECT 1
     
 ---
 
@@ -53,22 +47,16 @@ datasource:
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
-    test-on-borrow: true
-    test-while-idle: true
-    initial-size: 2
-    min-idle: 2
-    max-idle: 3
-    max-active: 5
-    validation-query: SELECT 1
+    minimum-idle: 2
+    maximum-pool-size: 5
+    auto-commit: false
+    connection-test-query: SELECT 1
   log:
     jdbc-url: jdbc:mysql://localhost:3306/rest_log?autoReconnect=true&useSSL=false
     username: rest
     password: rest
     driver-class-name: com.mysql.jdbc.Driver
-    test-on-borrow: true
-    test-while-idle: true
-    initial-size: 2
-    min-idle: 2
-    max-idle: 3
-    max-active: 5
-    validation-query: SELECT 1
+    minimum-idle: 2
+    maximum-pool-size: 5
+    auto-commit: false
+    connection-test-query: SELECT 1
